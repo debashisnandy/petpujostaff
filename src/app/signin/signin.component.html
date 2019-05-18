@@ -1,0 +1,73 @@
+<div class="signin-background">
+  <div class="background-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="sign-in-container">
+              <div class="row">
+                  <div class="col s4">
+                    <div class="food-item">
+                    </div>
+                  </div>
+                  <form (ngSubmit)="onSubmit()" #f="ngForm">
+                  <div class="col s8">
+                    <div class="row"> 
+                      <div class="col s12">
+                        <div class="heading-signin">
+                          <h2>Staff Login</h2>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <input matInput 
+                                ngModel
+                                #email="ngModel"
+                                placeholder="Enter your email" 
+                                email
+                                name="email" required>
+                                <mat-error *ngIf="email.invalid && email.touched"> Please enter a valid email </mat-error>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                              <div class="row">
+                                <div class="col s11">
+                                    <input 
+                                    matInput 
+                                    ngModel
+                                    #password="ngModel"
+                                    name="password"
+                                    placeholder="Enter your password" 
+                                    required
+                                    [type]="hide ? 'password' : 'text'">
+                                </div>
+                                <div class="col s1">
+                                    <mat-icon matSuffix (click)="hide = !hide" style="cursor: pointer;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </div>
+                                
+                              </div>
+                              <mat-error *ngIf="password.invalid && password.touched"> Please enter your password </mat-error>
+                            </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  
+                    <div class="row">
+                        <button class="btn waves-effect waves-light" type="submit" [disabled]="!f.valid" name="action">Submit
+                            <i class="material-icons right">send</i>
+                          </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

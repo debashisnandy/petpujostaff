@@ -1,0 +1,29 @@
+<mat-toolbar class="white-text green darken-1 z-depth-2">
+  <mat-toolbar-row>
+    <span>PetPujo Staff</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" style="background: rgba(255, 255, 255, 0); border: rgba(255, 255, 255, 0);">
+      <mat-icon aria-hidden="true">
+        account_circle
+        </mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item (click)="onLogOut()">Log Out</button>
+        </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+  <div style='margin-top:60px;'>
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+<!-- <button mat-icon-button [matMenuTriggerFor]="menu" style="background: rgba(255, 255, 255, 0); border: rgba(255, 255, 255, 0);">
+  <mat-icon  aria-hidden="true">
+    account_circle
+    </mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="onLogOut()">Log Out</button>
+    </mat-menu> -->

@@ -1,0 +1,28 @@
+
+
+<form #fr="ngForm">
+<div mat-dialog-content>
+  
+    <h4>Order placein confirmation</h4>
+
+    <p>Enter roll number</p>
+  
+    <input 
+    matInput 
+    [(ngModel)]="data.name" 
+    required
+    minlength="8"
+    maxlength="9" 
+    #userName="ngModel"
+    name="userName"
+    placeholder="Roll No(BCA15025)"
+    >
+    <mat-error *ngIf="userName.invalid && userName.touched"> Enter Valid Roll </mat-error>
+  
+    
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data"  [disabled]="userName.invalid">Confirm</button>
+</div>
+</form>

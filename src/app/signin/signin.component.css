@@ -1,0 +1,37 @@
+.signin-background{
+    background: url('https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.background-overlay{
+    height: 100%;
+    background-color: rgba(169, 169, 169, 0.438);
+    text-align: center;
+}
+.sign-in-container{
+    background-color: white;
+    margin-top: 20%;
+    height: 500px;
+    width: 100%;
+    border-radius: 50px;
+}
+.food-item{
+    background: url('https://images.pexels.com/photos/1639556/pexels-photo-1639556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.heading-signin{
+    text-align: center;
+    color: #43a047;
+}
+
+@media(max-height:755px){
+    .sign-in-container{
+        margin-top: 10%;
+    }
+}
